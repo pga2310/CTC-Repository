@@ -1,0 +1,56 @@
+/*Cracking the coding interview
+ * Ch-1, Arrays and Strings
+ * Problem1:
+ * Implement and algorithm to determine if a string has all unique characters. 
+ * What if you cannot use additional data structures*/
+public class Unique_Char {
+
+	public boolean findUnique(String strInput)
+	{
+		boolean result = false;
+		char[] ch = new char[strInput.length()];
+		ch = strInput.toCharArray();
+		
+		for(char ch1:ch)
+		{
+			if(strInput.indexOf(ch1) == strInput.lastIndexOf(ch1))
+			{
+				 result =  true;
+			}
+			else 
+			{
+				result =  false;
+				break;		
+			}
+		}
+		
+		if(result == true)
+		{
+			System.out.println("Given string has unique characters");
+			return true;
+		}
+		else
+		{
+			System.out.println("Given string does not have unique characters");
+			return false;
+		}
+
+	}
+}
+
+
+
+Driver Class:
+
+/*Driver class for Unique_Char class, CTC-CH1_1.1*/
+public class Unique_Char_Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Unique_Char unique = new Unique_Char();
+		String str = "hariom";
+		System.out.println(unique.findUnique(str));
+		
+	}
+
+}
