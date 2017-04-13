@@ -46,8 +46,10 @@ public class CheckUnique {
     }
 
     public static void main(String arg[]) {
-        String input = "Hi worlld";
+        String input = "YOUR STRING HERE!";
         CheckUnique obj = new CheckUnique();
+        System.out.println(obj.method1(input));
+        System.out.println(obj.method2(input));
         System.out.println(obj.method3(input));
     }
 }
